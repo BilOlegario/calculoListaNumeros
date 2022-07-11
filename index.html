@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de soma de elementos com OO</title>
+
+    <script src="logica.js"></script>
+
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Buscar possível soma de Números</h1>
+    </header>
+
+    <main>
+
+        <div class="title">
+            <h2>Lista de numerais a serem somados</h2>
+        </div>
+
+        <div class="card">
+
+            <div class="lineInput">
+                <label>Numero</label>
+                <input type="number" id="numero" placeholder="Digite o número" onkeypress="numero.salvarOnKey(event)">
+            </div>
+
+            <button onclick="numero.salvar()" id="btn1">Salvar</button>
+            <button onclick="numero.cancelar()">Cancelar</button>
+        </div>
+
+        <div class="content">
+            <table border="1">
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Numero</th>
+                    <th class="center">Ações</th>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="title">
+            <h3>Resultado esperado na soma dos numerais</h3>
+            <input type="number" id="esperado" placeholder="Digite o número" class="lineInput" onkeypress="numero.calcularOnKey(event)">
+        </div>
+        <button onclick="numero.calcular()">Calcular</button>
+
+    </main>
+    <footer>
+        <h4 id="resultadoFinal" class="title"></h4>
+    </footer>
+
+
+</body>
+
+</html>
